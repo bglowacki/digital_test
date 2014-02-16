@@ -1,3 +1,7 @@
+#ruby=ruby-2.0.0-p353
+#ruby-gemset=digital_test
+
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
