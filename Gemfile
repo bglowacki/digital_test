@@ -41,6 +41,7 @@ end
 
 group :development do
   gem "capistrano-rails"
+  gem 'capistrano-rvm'
 end
 
 # Use ActiveModel has_secure_password
