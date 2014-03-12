@@ -5,6 +5,8 @@
 source 'https://rubygems.org'
 
 
+gem 'unicorn'
+gem "unicorn-rails", "~> 1.1.0"
 gem 'rack-cors', :require => 'rack/cors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
