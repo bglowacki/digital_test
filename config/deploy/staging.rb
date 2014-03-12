@@ -1,12 +1,16 @@
+set :stage, :staging
+set :branch, :master
+set :rails_env, :staging
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # # Don't declare `role :all`, it's a meta role
-# role :app, %w{deploy@example.com}
-# role :web, %w{deploy@example.com}
-# role :db,  %w{deploy@example.com}
+role :app, %w{root@107.170.75.235}
+role :web, %w{root@107.170.75.235}
+role :db,  %w{root@107.170.75.235}
 
 # Extended Server Syntax
 # ======================

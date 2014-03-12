@@ -3,6 +3,7 @@ lock '3.1.0'
 
 set :application, 'digital_test'
 set :repo_url, 'git@github.com:Vangerdahast/digital_test.git'
+set :branch, :master
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -12,6 +13,8 @@ set :deploy_to, '~/rails/digital_test'
 
 # Default value for :scm is :git
 set :scm, :git
+set :user, :root
+set :use_sudo, true
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -51,9 +54,9 @@ namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+      within release_path do
+        execute :rake, 'cache:clear'
+      end
     end
   end
 
